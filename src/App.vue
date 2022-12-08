@@ -1,29 +1,22 @@
-<template>
-  <div id="app">
-    <HeaderArea plogo="그린컴퓨터" />
-    <h2>{{vname + '씨' + cnt + '번 방문하셨습니다'}}</h2>
-    <button :class="classname" :style="btnstyle" @click="append()">클릭</button>
-    <!-- 라우터 컴포넌트에 연결된 컴포넌트가 렌더링 됨-->
-    <router-view></router-view>
-    <hr>
-    <p>라우터링크 사용:
-      <router-link to="/main">메인 페이지</router-link>
-      <router-link to="/sub">서브 페이지</router-link>
-    </p>
-
-    <div v-for="(x) in oneromms" :key="x.id">
-      <img :src="x.image" alt="" class="rimg">
-      <h4>{{ (x.id+1) + '.' + x.title }}</h4>
-      <p>{{ 'price : ' + x.price }}</p>
-      <p>{{ x.content }}</p>
-   </div> 
-
-    <FooterArea />
-  </div>
-
-</template>
-
 <style>
+/* Reset CSS  */
+* { margin:0; padding:0; border:0; outline:0; vertical-align:top;
+    -webkit-text-size-adjust:none;  }
+    html{font-family:'돋움'; font-size:16px; color:#333;}
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+    ul, ol, dl { list-style:none; }
+    img, video {border:0; vertical-align:top; }
+    a, a:link {color:#333;text-decoration:none; display: block; }
+    a:visited { color:#333; }
+    a:active {color:#333;text-decoration:none; }
+    table { border-collapse:collapse; border-spacing:0; }
+    input, select { vertical-align:middle; }
+    label { cursor:pointer; }
+    .blind,legend,hr,caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+    em,address { font-style:normal; font-weight:normal; }
+    p,li,dd{ line-height:1.5em}
+    .hidden, #skipNav{display: block; position: absolute; left:-1000%; top:0; width: 1px; height: 1px;
+        overflow: hidden; color: #333;}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,37 +24,59 @@
   text-align: center;
   color: #2c3e50;
 }
-.head{color: red;}
-.rimg{width: 90%; margin: 15px auto;}
-h4{font-size: 24px;margin: 15px 0;}
-p{font-size: 18px; margin: 15px 0;}
+
+</style>
+<template>
+  <div id="app">
+    <HeaderArea />
+    <!-- 라우터 컴포넌트에 연결된 컴포넌트가 렌더링 됨-->
+    <!-- router-view == 실제 main, sub page들 content, headerArea 의 nav 로 content만 교체 -->
+    <!-- <MainVisual /> -->
+    <router-view></router-view>
+    <!-- json 예시 파일 -->
+    <!-- <div v-for="(x) in oneromms" :key="x.id">
+      <img :src="x.image" alt="" class="rimg">
+      <h4>{{ (x.id+1) + '.' + x.title }}</h4>
+      <p>{{ 'price : ' + x.price }}</p>
+      <p>{{ x.content }}</p>
+   </div>  -->
+
+   <div v-for="(data,index) in seouldata" :key="index">
+    
+   </div>
+
+    <FooterArea />
+  </div>
+
+</template>
+
+<style>
+
 </style>
 
 <script>
  import HeaderArea from './components/HeaderArea'
+//  import MainVisual from './components/MainVisual'
  import FooterArea from './components/FooterArea'
-  import jdata from './oneroom.json';
+//  import jdata from './oneroom.json'
+ import seouljson from './seoul.json'
 
  export default {
   name : 'app',
   components:{
        HeaderArea,
-       FooterArea
+       FooterArea,
+      //  MainVisual
   },
   
   data(){
     return{
-      vname: "홍길동",
-      cnt:1,
-      classname: 'btn',
-      btnstyle: 'background:red; color:#fff; width:200px; padding:15px 0',
-      oneromms : jdata
+      // oneromms : jdata,
+      seouldata : seouljson
     }
   },
   methods: {
-    append: function(){
-      this.cnt++;
-    }
+
   }
   }
 </script>
