@@ -17,91 +17,81 @@
     </section>
 
     <section class="content2">
-        <h3>주택용 소방 시설</h3>
-          <v-stepper v-model="e1">
-    <v-stepper-header>
-      <v-stepper-step
-        :complete="e1 > 1"
-        step="1"
-      >
-        Name of step 1
-      </v-stepper-step>
+        <h3>화재시 행동 강령</h3>
+        <v-app id="inspire">
+            <v-stepper v-model="e1">
+                <v-stepper-header>
+                    <v-stepper-step
+                        :complete="e1 > 1"
+                        step="1"
+                    >
+                        화제가 나기 전
+                    </v-stepper-step>
 
-      <v-divider></v-divider>
+                    <v-divider></v-divider>
 
-      <v-stepper-step
-        :complete="e1 > 2"
-        step="2"
-      >
-        Name of step 2
-      </v-stepper-step>
+                    <v-stepper-step
+                        :complete="e1 > 2"
+                        step="2"
+                    >
+                        화재가 난 후
+                    </v-stepper-step>
 
-      <v-divider></v-divider>
+                    <v-divider></v-divider>
 
-      <v-stepper-step step="3">
-        Name of step 3
-      </v-stepper-step>
-    </v-stepper-header>
+                    <v-stepper-step step="3">
+                        진화가 완료된 후
+                    </v-stepper-step>
+                </v-stepper-header>
 
-    <v-stepper-items>
-      <v-stepper-content step="1">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
+            <v-stepper-items>
+                <v-stepper-content step="1">
+                    <v-card
+                    class="mb-12"
+                    color="grey lighten-1"
+                    height="200px"
+                    ></v-card>
 
-        <v-btn
-          color="primary"
-          @click="e1 = 2"
-        >
-          Continue
-        </v-btn>
+                    <v-btn
+                    color="primary"
+                    @click="e1 = 2"
+                    >
+                    Continue
+                    </v-btn>
+                </v-stepper-content>
 
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
+                <v-stepper-content step="2">
+                    <v-card
+                    class="mb-12"
+                    color="grey lighten-1"
+                    height="200px"
+                    ></v-card>
 
-      <v-stepper-content step="2">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
+                    <v-btn
+                    color="primary"
+                    @click="e1 = 3"
+                    >
+                    Continue
+                    </v-btn>
+                </v-stepper-content>
 
-        <v-btn
-          color="primary"
-          @click="e1 = 3"
-        >
-          Continue
-        </v-btn>
+                <v-stepper-content step="3">
+                    <v-card
+                    class="mb-12"
+                    color="grey lighten-1"
+                    height="200px"
+                    ></v-card>
 
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
-
-      <v-stepper-content step="3">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
-
-        <v-btn
-          color="primary"
-          @click="e1 = 1"
-        >
-          Continue
-        </v-btn>
-
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
-    </v-stepper-items>
-  </v-stepper>
+                    <v-btn
+                    color="primary"
+                    @click="e1 = 1"
+                    >
+                    Continue
+                    </v-btn>
+                </v-stepper-content>
+            </v-stepper-items>
+        </v-stepper>
+        </v-app>
     </section>
 </article>
 
@@ -121,16 +111,6 @@ export default {
     }
     },
 }
-</script>
-
-<script>
-  export default {
-    data () {
-      return {
-        e1: 1,
-      }
-    },
-  }
 </script>
 
 <style>
