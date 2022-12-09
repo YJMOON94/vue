@@ -156,12 +156,23 @@
         </div>
 
         <div class="section_content">
-            <p>{{ambulance.DATA.length}}</p>
-            <ul>
-                <li v-for="(x,index) in ambulance.DATA" :key="index">
-                    {{ambulance.DATA[index].onradr}}
-                </li>
+            <ul class="area_list">
+                <li>강서구</li>
+                <li>광진구</li>
+                <li>도봉구</li>
+                <li>송파구</li>
+                <li>용산구</li>
+                <li>중구</li>
+                <li>중랑구</li>
             </ul>
+
+            <div class="dataprint_box">
+                <ul>
+                    <li v-for="(x,index) in firetruck_area" :key="index">
+                        <p>{{ x }}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </article>
@@ -172,6 +183,7 @@
 import MainVisual from './MainVisual'
 import sectiontitle_data from '../section_title.json'
 import ambulance_data from '../seoul.json'
+import firetruck_area_data from '../area.json'
 
 export default {
   name : 'app',
@@ -182,17 +194,14 @@ export default {
     return {
     section_header : sectiontitle_data,
     ambulance : ambulance_data,
+    firetruck_area : firetruck_area_data.DATA,
     e1: 1,
     }
   },
   methods:{
-    search: function(){
 
-        
-    }
   }
 }
-
 </script>
 
 <style>
@@ -276,4 +285,8 @@ export default {
         width:100%;
     }
 
+    .content3{}
+    .content3 .area_list{display: flex;}
+    .content3 .area_list li{width:calc(100%/7); text-align: center; border:1px solid #999; padding:20px 0; cursor:pointer; transition:all .3s; font-size: 1.25rem; font-weight: 700;}
+    .content3 .area_list li:hover{background: #ff4433; color:#fff}
 </style>
