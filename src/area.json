@@ -1,6 +1,4 @@
-{
-"DESCRIPTION" : {"GU_NM":"시군구명","LOTNO_ADDR":"소재지지번주소","LDAR":"전용주차단위구획수","DATA_CRTR_YMD":"데이터기준일자","APT_TEL":"공동주택관리소전화번호","INST_TELNO":"관할소방서전화번호","GUBUN_CODE":"전용구역위치구분코드","GU_CODE":"시군구코드","ROAD_NM_ADDR":"소재지도로명주소","LAT":"위도","APT_DONG":"동번호","APT_NM":"공동주택명","SIDO_NM":"시도명","FIRE_INST_NM":"관할소방서명","LOT":"경도"},
-"DATA" : [
+[
 {"gu_code":"11500","data_crtr_ymd":"2022-08-19","fire_inst_nm":"강서소방서     ","sido_nm":"서울특별시","road_nm_addr":"서울특별시 강서구 공항대로 103","lotno_addr":"서울특별시 강서구 마곡동 744","apt_tel":"02-2666-2806","gubun_code":"01","gu_nm":"강서구","lot":"126.8191320","ldar":"2","inst_telno":"02-6981-5043  ","apt_nm":"마곡엠벨리9단지","apt_dong":"901","lat":"37.5623160"},
 {"gu_code":"11500","data_crtr_ymd":"2022-08-19","fire_inst_nm":"강서소방서     ","sido_nm":"서울특별시","road_nm_addr":"서울특별시 강서구 공항대로 103","lotno_addr":"서울특별시 강서구 마곡동 744","apt_tel":"02-2666-2806","gubun_code":"01","gu_nm":"강서구","lot":"126.8195455","ldar":"2","inst_telno":"02-6981-5043  ","apt_nm":"마곡엠벨리9단지","apt_dong":"902","lat":"37.5623794"},
 {"gu_code":"11500","data_crtr_ymd":"2022-08-19","fire_inst_nm":"강서소방서     ","sido_nm":"서울특별시","road_nm_addr":"서울특별시 강서구 공항대로 103","lotno_addr":"서울특별시 강서구 마곡동 744","apt_tel":"02-2666-2806","gubun_code":"01","gu_nm":"강서구","lot":"126.8202972","ldar":"2","inst_telno":"02-6981-5043  ","apt_nm":"마곡엠벨리9단지","apt_dong":"903","lat":"37.5623358"},
@@ -92,4 +90,3 @@
 {"gu_code":"11260","data_crtr_ymd":"2022-08-19","fire_inst_nm":"중랑소방서     ","sido_nm":"서울특별시","road_nm_addr":"서울특별시 중랑구 양원역로10길 47","lotno_addr":"서울특별시 중랑구 망우동 620","apt_tel":"02-433-0965","gubun_code":"01","gu_nm":"중랑구","lot":"127.108065","ldar":"2","inst_telno":"02-6981-8843  ","apt_nm":"엘에이치 엘스타시온","apt_dong":"203","lat":" 37.607921"},
 {"gu_code":"11260","data_crtr_ymd":"2022-08-19","fire_inst_nm":"중랑소방서     ","sido_nm":"서울특별시","road_nm_addr":"서울특별시 중랑구 양원역로10길 47","lotno_addr":"서울특별시 중랑구 망우동 620","apt_tel":"02-433-0965","gubun_code":"02","gu_nm":"중랑구","lot":"127.108042","ldar":"3","inst_telno":"02-6981-8843  ","apt_nm":"엘에이치 엘스타시온","apt_dong":"204","lat":" 37.607434"}
 ]
-}

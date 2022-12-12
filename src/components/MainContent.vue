@@ -19,6 +19,7 @@
         <div class="section_title">
             <h3>{{ section_header[0].title }}</h3>
             <p>{{ section_header[0].content }}</p>
+            <router-link to="/sub1" class="pageMoveBtn">더 알아보기</router-link>
         </div>
         <v-app id="inspire">
             <v-stepper v-model="e1">
@@ -153,26 +154,44 @@
         <div class="section_title">
             <h3>{{ section_header[1].title }}</h3>
             <p>{{ section_header[1].content }}</p>
+            <router-link to="/sub2" class="pageMoveBtn">더 알아보기</router-link>
         </div>
 
         <div class="section_content">
-            <ul class="area_list">
-                <li>강서구</li>
-                <li>광진구</li>
-                <li>도봉구</li>
-                <li>송파구</li>
-                <li>용산구</li>
-                <li>중구</li>
-                <li>중랑구</li>
-            </ul>
+            <dl>
+                <dt>소방정책국</dt>
+                <dd>대한민국 소방청은 소방정책과, 소방분석제도과, 화재예방과, 화재대응조사과, 소방산업과, 국립소방병원건립추진단 등 업무를 여러 부서로 분할하여 보다 효과적이고 빠르게 국민안전에 대응할 수 있도록 체계를 갖추고 있습니다.</dd>
+            </dl>
+        </div>
+    </section>
 
-            <div class="dataprint_box">
-                <ul>
-                    <li v-for="(x,index) in firetruck_area" :key="index">
-                        <p>{{ x }}</p>
-                    </li>
-                </ul>
-            </div>
+    <section class="content4">
+        <div class="section_title">
+            <h3>{{ section_header[2].title }}</h3>
+            <p>{{ section_header[2].content }}</p>
+            <router-link to="/sub3" class="pageMoveBtn">더 알아보기</router-link>
+        </div>
+        <div class="section_content">
+            <ul>
+                <li></li>
+                <li>
+                    <dl>
+                        <dt><img src="../assets/danger.png" alt="위험">전용구역의 주차 금지 및 방해행위 금지</dt>
+                        <dd>1. 전용구역에 물건 등을 쌓거나 주차하는 행위</dd>
+                        <dd>2. 전용구역의 앞면, 뒷면 또는 양 측면에 물건 등을 쌓거나 주차하는 행위.<br>다만, 부설주차장의 주차구획 내에 주차하는 경우는 제외</dd>
+                        <dd>3. 전용구역 진입로에 물건 등을 쌓거나 주차하여 전용구역으로의 진입을 가로막는 행위</dd>
+                        <dd>4. 전용구역 노면표지를 지우거나 훼손하는 행위</dd>
+                        <dd>5. 그 밖의 방법으로 소방자동차가 전용구역에 주차하는 것을 방해하거나 전용구역으로 진입하는 것을 방해하는 행위</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="content4">
+        <div class="section_title">
+            <!-- <h3>{{ section_header[2].title }}</h3>
+            <p>{{ section_header[2].content }}</p> -->
         </div>
     </section>
 </article>
@@ -182,7 +201,7 @@
 <script>
 import MainVisual from './MainVisual'
 import sectiontitle_data from '../section_title.json'
-import ambulance_data from '../seoul.json'
+// import ambulance_data from '../seoul.json'
 import firetruck_area_data from '../area.json'
 
 export default {
@@ -193,9 +212,9 @@ export default {
     data () {
     return {
     section_header : sectiontitle_data,
-    ambulance : ambulance_data,
-    firetruck_area : firetruck_area_data.DATA,
-    e1: 1,
+    // ambulance : ambulance_data,
+    firetruck_area : firetruck_area_data,
+    e1: 1
     }
   },
   methods:{
@@ -209,10 +228,25 @@ export default {
     .section_title h3{font-size: 2rem; font-weight: 700; position: relative; left:0; top:0;}
     .section_title h3::after{content:''; display: block; position: absolute; width:2px; height:50px; background: #ff4433; left: 50%; bottom:-80px;}
     .section_title p{font-size: 1rem; font-weight: 500; margin-top: 100px;}
-    .content1{
-        /* text-align: left; */
-        padding:5% 0;
+    .section_title .pageMoveBtn{
+        display: inline-block;
+        padding:20px 30px;
+        background:#ff4433;
+        color:#fff;
+        border-radius: 8px;
+        box-shadow: 3px 3px 10px rgba(0,0,0,.3);
+        margin:50px 0;
+        font-weight: 700;
+        border:1px solid rgba(0,0,0,0);
+        transition:all .3s
     }
+    .section_title .pageMoveBtn:hover{
+        border:1px solid #ff4433;
+        background: #fff;
+        color:#ff4433;
+    }
+
+    .content1{padding:5% 0;}
     .content1 ul{display: flex;}
     .content1 ul li{width: calc( 100% / 7 ); display: table;}
     .content1 ul li a{ vertical-align: middle; position: relative; padding-left: 50px; display: table-cell; font-weight: 700; font-size: 1.1vw;}
@@ -285,8 +319,72 @@ export default {
         width:100%;
     }
 
-    .content3{}
-    .content3 .area_list{display: flex;}
+    .content3{
+        margin-bottom: 100px;
+    }
+    .content3 .section_content{
+        width:100%;
+        background: url('../assets/background.jpg') center center no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .content3 .section_content dl{
+        padding:3%;
+        text-align: left;
+        line-height: 2;
+        color:#fff;
+    }
+    .content3 .section_content dl dt{
+        font-size:2rem;
+        font-weight: 700;
+        border-bottom: 3px solid #ff4433;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    .content3 .section_content dl dd{
+        font-size: 1.25rem;
+        font-weight: 700;
+        color:#ddd
+    }
+
+    .content4{
+        width:95%; margin:0 auto;
+    }
+    /* .content3 .area_list{display: flex;}
     .content3 .area_list li{width:calc(100%/7); text-align: center; border:1px solid #999; padding:20px 0; cursor:pointer; transition:all .3s; font-size: 1.25rem; font-weight: 700;}
-    .content3 .area_list li:hover{background: #ff4433; color:#fff}
+    .content3 .area_list li:hover{background: #ff4433; color:#fff} */
+    .v-slide-group__content {
+        justify-content: center;
+    }
+    .content4 .section_content ul{
+        display: flex;
+    }
+    .content4 .section_content ul li{
+        width:50%;
+    }
+    .content4 .section_content ul li:nth-of-type(1){
+        background: url('../assets/area.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .content4 .section_content ul li:nth-of-type(2) img{
+        vertical-align: top;
+        width:50px;
+        height:50px;
+        margin-right: 10px;
+    }
+    .content4 .section_content ul li:nth-of-type(2) dl{
+        text-align: left;
+        padding:10%;
+    }
+    .content4 .section_content ul li:nth-of-type(2) dl dt{
+        font-size: 2rem;
+        font-weight: 700;
+        color:#ff4433;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    .content4 .section_content ul li:nth-of-type(2) dl dd{
+        line-height: 2;
+        font-size: 1.25rem;
+    }
 </style>

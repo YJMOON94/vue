@@ -6,13 +6,13 @@
           <h2 class="hidden">네비게이션 영역</h2>
             <ul>
                 <li>
-                    <router-link to="/sub1">소방소식</router-link>
+                    <router-link to="/sub1">행동강령</router-link>
                 </li>
                 <li>
-                    <router-link to="/sub2">기관소개</router-link>
+                    <router-link to="/sub2">담당업무</router-link>
                 </li>
                 <li>
-                    <router-link to="/sub3">정보공개</router-link>
+                    <router-link to="/sub3">전용구역</router-link>
                 </li>
             </ul>
         </nav>
