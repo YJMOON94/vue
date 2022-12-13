@@ -29,21 +29,10 @@
 <template>
   <div id="app">
     <HeaderArea />
-    <!-- 라우터 컴포넌트에 연결된 컴포넌트가 렌더링 됨-->
-    <!-- router-view == 실제 main, sub page들 content, headerArea 의 nav 로 content만 교체 -->
-    <!-- <MainVisual /> -->
-    <router-view></router-view>
-    <!-- json 예시 파일 -->
-    <!-- <div v-for="(x) in oneromms" :key="x.id">
-      <img :src="x.image" alt="" class="rimg">
-      <h4>{{ (x.id+1) + '.' + x.title }}</h4>
-      <p>{{ 'price : ' + x.price }}</p>
-      <p>{{ x.content }}</p>
-   </div>  -->
 
-   <div v-for="(data,index) in seouldata" :key="index">
+    <!-- router-view == 실제 main, sub page들 content, headerArea 의 nav 로 content만 교체 -->
     
-   </div>
+    <router-view></router-view>
 
     <FooterArea />
   </div>
@@ -56,9 +45,7 @@
 
 <script>
  import HeaderArea from './components/HeaderArea'
-//  import MainVisual from './components/MainVisual'
  import FooterArea from './components/FooterArea'
-//  import jdata from './oneroom.json'
  import seouljson from './seoul.json'
 
  export default {
@@ -66,12 +53,10 @@
   components:{
        HeaderArea,
        FooterArea,
-      //  MainVisual
   },
   
   data(){
     return{
-      // oneromms : jdata,
       seouldata : seouljson
     }
   },

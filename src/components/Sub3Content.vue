@@ -2,7 +2,7 @@
     <article class="sub3">
         <h2 class="hidden">본문 컨텐츠 영역</h2>
 
-        <section class="sub_main3"><div class="sub_main_inner"><h3>정보공개</h3></div></section>
+        <section class="sub_main3"><div class="sub_main_inner"><h3>전용구역</h3></div></section>
 
         <section class="sub_content">
             <div class="section_title">

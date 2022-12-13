@@ -33,12 +33,36 @@
         </v-card-text>
       </v-card>
     </v-footer>
+    <div class="moveToTop">
+      <a href="#top"><i class="fa-solid fa-caret-up"></i></a>
+    </div>
   </footer>
 </template>
 
 <style>
 footer .v-card {
   width:100%
+}
+html{scroll-behavior: smooth;}
+
+footer .moveToTop a{
+  color:#fff;
+  border:1px solid #ff4433;
+  background: #ff4433;
+  position: fixed;
+  right:5px;
+  bottom:5px;
+  text-align: center;
+  padding:12px 20px;
+  font-size: 2rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  transition:all .3s
+}
+footer .moveToTop a:hover{
+  border:1px solid #ff4433;
+  background: #fff;
+  color:#ff4433
 }
 </style>
 

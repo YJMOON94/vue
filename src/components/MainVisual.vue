@@ -4,21 +4,21 @@
             <div class="box">
                 <swiper class="swiper" :options="swiperOption">
                     <swiper-slide>
-                        <img src="../assets/main01.jpg">
+                        <img :src="image_box.image1_url">
                         <dl>
                             <dt>선제적 예방 정교한 대응</dt>
                             <dd>THE 견고한 국민안전</dd>
                         </dl>
                         </swiper-slide>
                     <swiper-slide>
-                        <img src="../assets/main02.jpg">
+                        <img :src="image_box.image2_url">
                         <dl>
                             <dt>화재 구조 구급 긴급신고는 119</dt>
                             <dd>비긴급신고는 안전신문고로 신고해주세요</dd>
                         </dl>
                         </swiper-slide>
                     <swiper-slide>
-                        <img src="../assets/main03.jpg">
+                        <img :src="image_box.image3_url">
                         <dl>
                             <dt>대한민국의 안전의 중심 소방청</dt>
                             <dd>소방청은 국민의 안전을 1순위로 생각합니다</dd>
@@ -56,6 +56,11 @@ export default {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           }
+        },
+        image_box:{
+            image1_url : require('../assets/main01.jpg'),
+            image2_url : require('../assets/main02.jpg'),
+            image3_url : require('../assets/main03.jpg')
         }
       }
     }

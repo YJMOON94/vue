@@ -53,10 +53,10 @@
                     class="mb-12 prevention_innerbox1"
                     >
                     <div class="prevention_inner">
-                        <img src="../assets/prevention01.jpg" alt="화재예방이미지">
-                        <img src="../assets/prevention02.jpg" alt="화재예방이미지">
-                        <img src="../assets/prevention03.jpg" alt="화재예방이미지">
-                        <img src="../assets/prevention04.jpg" alt="화재예방이미지">
+                        <img :src="image_box.image1_url1" alt="화재예방이미지">
+                        <img :src="image_box.image1_url2" alt="화재예방이미지">
+                        <img :src="image_box.image1_url3" alt="화재예방이미지">
+                        <img :src="image_box.image1_url4" alt="화재예방이미지">
                         <h4>화재 예방하기</h4>
                         <dl>
                             <dt>전기 화재 예방 <i class="fa-solid fa-plug"></i></dt>
@@ -85,7 +85,7 @@
                     class="mb-12 prevention_innerbox2"
                     >
                     <div class="prevention_inner">
-                        <img src="../assets/prevention05.jpg" alt="화재시행동강령">
+                        <img :src="image_box.image1_url5" alt="화재시행동강령">
                         <h4>화재 경보가 울릴 때 행동요령</h4>
                         <dl>
                             <dt>비상소집을 합니다 <i class="fa-solid fa-users"></i></dt>
@@ -119,7 +119,7 @@
                     class="mb-12 prevention_innerbox3"
                     >
                     <div class="prevention_inner">
-                        <img src="../assets/prevention06.jpg" alt="cpr">
+                        <img :src="image_box.image1_url6" alt="cpr">
                         <h4>심폐소생술</h4>
                         <dl>
                             <dt>확인 <i class="fa-solid fa-user-check"></i></dt>
@@ -176,7 +176,7 @@
                 <li></li>
                 <li>
                     <dl>
-                        <dt><img src="../assets/danger.png" alt="위험">전용구역의 주차 금지 및 방해행위 금지</dt>
+                        <dt><img :src="image_box.image1_url7" alt="위험">전용구역의 주차 금지 및 방해행위 금지</dt>
                         <dd>1. 전용구역에 물건 등을 쌓거나 주차하는 행위</dd>
                         <dd>2. 전용구역의 앞면, 뒷면 또는 양 측면에 물건 등을 쌓거나 주차하는 행위.<br>다만, 부설주차장의 주차구획 내에 주차하는 경우는 제외</dd>
                         <dd>3. 전용구역 진입로에 물건 등을 쌓거나 주차하여 전용구역으로의 진입을 가로막는 행위</dd>
@@ -187,13 +187,7 @@
             </ul>
         </div>
     </section>
-
-    <section class="content4">
-        <div class="section_title">
-            <!-- <h3>{{ section_header[2].title }}</h3>
-            <p>{{ section_header[2].content }}</p> -->
-        </div>
-    </section>
+    
 </article>
 </div>
 </template>
@@ -214,7 +208,16 @@ export default {
     section_header : sectiontitle_data,
     // ambulance : ambulance_data,
     firetruck_area : firetruck_area_data,
-    e1: 1
+    e1: 1,
+    image_box :{
+        image1_url1 : require('../assets/prevention01.jpg'),
+        image1_url2 : require('../assets/prevention02.jpg'),
+        image1_url3 : require('../assets/prevention03.jpg'),
+        image1_url4 : require('../assets/prevention04.jpg'),
+        image1_url5 : require('../assets/prevention05.jpg'),
+        image1_url6 : require('../assets/prevention06.jpg'),
+        image1_url7 : require('../assets/danger.png')
+    }
     }
   },
   methods:{
