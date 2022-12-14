@@ -18,10 +18,10 @@ export default new Router({
     // { path: '/', component: main_page},
     // { path: '/main', component: main_page},
     // { path: '/sub', component: sub_page},
-    { path: '/', component: MainContent},
-    { path: '/main', component: MainContent},
-    { path: '/sub1', component: sub1Content},
-    { path: '/sub2', component: sub2Content},
-    { path: '/sub3', component: sub3Content}
+    { path: '/vue/', component: MainContent},
+    { path: '/vue/main', component: MainContent},
+    { path: '/vue/sub1', component: sub1Content},
+    { path: '/vue/sub2', component: sub2Content},
+    { path: '/vue/sub3', component: sub3Content}
   ]
 })

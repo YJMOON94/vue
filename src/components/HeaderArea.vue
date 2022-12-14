@@ -1,18 +1,18 @@
 <template>
     <header>
-        <router-link to="/main"><h1 class="logo">소방청로고</h1></router-link>
+        <router-link to="/vue/main"><h1 class="logo">소방청로고</h1></router-link>
 
         <nav>
           <h2 class="hidden">네비게이션 영역</h2>
             <ul>
                 <li>
-                    <router-link to="/sub1">행동강령</router-link>
+                    <router-link to="/vue/sub1">행동강령</router-link>
                 </li>
                 <li>
-                    <router-link to="/sub2">담당업무</router-link>
+                    <router-link to="/vue/sub2">담당업무</router-link>
                 </li>
                 <li>
-                    <router-link to="/sub3">전용구역</router-link>
+                    <router-link to="/vue/sub3">전용구역</router-link>
                 </li>
             </ul>
         </nav>

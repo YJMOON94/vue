@@ -19,7 +19,7 @@
         <div class="section_title">
             <h3>{{ section_header[0].title }}</h3>
             <p>{{ section_header[0].content }}</p>
-            <router-link to="/sub1" class="pageMoveBtn">더 알아보기</router-link>
+            <router-link to="/vue/sub1" class="pageMoveBtn">더 알아보기</router-link>
         </div>
         <v-app id="inspire">
             <v-stepper v-model="e1">
@@ -53,7 +53,7 @@
                     class="mb-12 prevention_innerbox1"
                     >
                     <div class="prevention_inner">
-                        <img :src="image_box.image1_url1" alt="화재예방이미지">
+                        <img src="@/assets/prevention01.jpg" alt="화재예방이미지">
                         <img :src="image_box.image1_url2" alt="화재예방이미지">
                         <img :src="image_box.image1_url3" alt="화재예방이미지">
                         <img :src="image_box.image1_url4" alt="화재예방이미지">
@@ -154,7 +154,7 @@
         <div class="section_title">
             <h3>{{ section_header[1].title }}</h3>
             <p>{{ section_header[1].content }}</p>
-            <router-link to="/sub2" class="pageMoveBtn">더 알아보기</router-link>
+            <router-link to="/vue/sub2" class="pageMoveBtn">더 알아보기</router-link>
         </div>
 
         <div class="section_content">
@@ -169,7 +169,7 @@
         <div class="section_title">
             <h3>{{ section_header[2].title }}</h3>
             <p>{{ section_header[2].content }}</p>
-            <router-link to="/sub3" class="pageMoveBtn">더 알아보기</router-link>
+            <router-link to="/vue/sub3" class="pageMoveBtn">더 알아보기</router-link>
         </div>
         <div class="section_content">
             <ul>
